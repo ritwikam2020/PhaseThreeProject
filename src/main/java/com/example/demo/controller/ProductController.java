@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.repository.ProductRepository;
@@ -74,9 +75,9 @@ public class ProductController {
 		return productrepository.findByCreatedDate(date);
 	}
 	@GetMapping("product/userproduct")
-	public List<Object> getUserProductDetails()
+	public List<Object> getUserProductDetails(@RequestParam String date,@RequestParam String catagory)
 	{
-		return productrepository.findByProductOrder();
+		return productrepository.findByDateandCatagory(date,catagory);
 	}
 	// update existing student 
 	@PutMapping("update/{id}")
