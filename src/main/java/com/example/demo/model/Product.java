@@ -26,8 +26,8 @@ public class Product {
 		@Column(name = "brand")
 		private String brand;
 		
-		@Column(name = "catagory")
-		private String catagory;
+		@Column(name = "category")
+		private String category;
 		
 		@Column(name = "price")
 		private int price;
@@ -75,11 +75,11 @@ public class Product {
 			this.brand = brand;
 		}
 		public String getcatagory() {
-			return catagory;
+			return category;
 		}
 
-		public void setcatagory(String catagory) {
-			this.catagory = catagory;
+		public void setcategory(String catagory) {
+			this.category = catagory;
 		}
 		public int getprice() {
 			return price;

@@ -51,10 +51,10 @@ public class ProductController {
 	{
 		return productrepository.findByPrice(price);
 	}
-	@GetMapping("product/catagory/{catagory}")
-	public List<Product> getProductCatagory(@PathVariable String catagory)
+	@GetMapping("product/category/{category}")
+	public List<Product> getProductCategory(@PathVariable String catagory)
 	{
-		return productrepository.findByCatagory(catagory);
+		return productrepository.findByCategory(catagory);
 	}
 	
 	@GetMapping("product/brand/{brand}")
